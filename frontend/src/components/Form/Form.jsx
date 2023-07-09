@@ -26,6 +26,7 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     addIncome(inputState);
+    getIncomes();
     setInputState({
       title: "",
       amount: "",
@@ -80,7 +81,7 @@ function Form() {
           </option>
           <option value="salary">Salary</option>
           <option value="freelancing">Freelancing</option>
-          <option value="investments">Investiments</option>
+          <option value="investments">Investments</option>
           <option value="stocks">Stocks</option>
           <option value="bitcoin">Bitcoin</option>
           <option value="bank">Bank Transfer</option>
