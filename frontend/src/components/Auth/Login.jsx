@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import Button from "../Button/Button";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,10 +21,18 @@ const Login = () => {
       console.log(response.data);
       if (response.data.success) {
         navigate("/dashboard");
-        alert(response.data.message);
+        toast.success(response.data.message, {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "light",
+        });
       }
     } catch (error) {
-      alert(error.response.data);
+      toast.error(error.response.data, {
+        position: "top-center",
+        autoClose: 3000,
+        theme: "light",
+      });
     }
   };
   return (

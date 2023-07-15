@@ -6,6 +6,7 @@ import Login from "./Login";
 import Orb from "../Orb/Orb";
 import bg from "../../img/bg.png";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Auth = () => {
   const [login, setLogin] = useState(false);
@@ -30,7 +31,11 @@ const Auth = () => {
         navigate("/dashboard");
       }
     } catch (error) {
-      alert(error.response.data.message);
+      toast.error(error.response.data.message, {
+        position: "top-center",
+        autoClose: 3000,
+        theme: "light",
+      });
     }
   };
   const orbMemo = useMemo(() => {
