@@ -1,4 +1,6 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
+const morgan = require("morgan");
 const cors = require("cors"); //cross origin resource sharing - CORS
 const { db } = require("./db/db");
 const { readdirSync } = require("fs"); //A function from the "fs" module to read the contents of a directory.
@@ -9,6 +11,8 @@ const PORT = process.env.PORT;
 
 // middlewares
 app.use(express.json()); //express.json(): A built-in middleware in Express to parse incoming requests with JSON payloads.
+app.use(morgan("tiny"));
+app.use(cookieParser());
 app.use(cors());
 
 //routes
