@@ -29,6 +29,12 @@ exports.login = async (req, res, next) => {
     next(error);
   }
 };
+exports.getMyProfile = (req, res) => {
+  res.status(200).json({
+    success: true,
+    user: req.user,
+  });
+};
 
 exports.logout = async (req, res) => {
   res

@@ -34,6 +34,11 @@ const ExpenseSchema = new mongoose.Schema(
       maxLength: 20,
       trim: true,
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      reference: "User",
+      required: true,
+    },
   },
   { timestamps: true }
 );
