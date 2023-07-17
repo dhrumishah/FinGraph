@@ -10,7 +10,7 @@ const Navigation = ({ active, setActive }) => {
       <div className="user-con">
         <img src={avatar} alt="" />
         <div className="text">
-          <h2>Dhrumi</h2>
+          <h2>dee</h2>
           <p>Your Money</p>
         </div>
       </div>
