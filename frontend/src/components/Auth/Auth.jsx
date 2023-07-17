@@ -19,7 +19,7 @@ const Auth = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/register",
+        "https://fingraph-6yev.onrender.com/api/v1/register",
         {
           name,
           email,
