@@ -7,7 +7,6 @@ import { useMemo, useState } from "react";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Income from "./components/Incomes/Income";
 import Expenses from "./components/Expenses/Expenses";
-import Auth from "./components/Auth/Auth";
 
 function Home() {
   const [active, setActive] = useState(1);
